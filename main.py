@@ -27,7 +27,9 @@ def main():
         char_dictionary = count_char(file_contents)
         char_dict_list = dict_conversion(char_dictionary)
         char_dict_list.sort(reverse=True, key=sort_on)
-        print(f"Total Word Count: {word_count}")
-        print(char_dict_list)
-
+        print("--- Begin report of books/frankenstein.txt ---")
+        print(f"{word_count} words found in the document\nThe following is a list of each alphabetical letter used in the document, with capital letters converted to lower case.")
+        for item in char_dict_list:
+            print(f"The letter '{item['char']}' was found {item['num']} times.")
+        print("--- End report ---")
 main()
