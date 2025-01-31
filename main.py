@@ -2,9 +2,9 @@ def count_char(string_in):
     string_in_lowered = string_in.lower()
     chars = {}
     for char in string_in_lowered:
-        if char in chars:
+        if char in chars and char.isalpha() == True:
             chars[char] += 1
-        else:
+        elif char not in chars and char.isalpha() == True:
             chars[char] = 1
     return chars
     
